@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Kantor Desa Ujung Pandan",
+    "latitude": -6.535,
+    "longitude": 110.74,
+    "category_name": "Kantor Desa",
+    "subcategory_name": null,
+    "address": "Jl. Raya Ujung Pandan, Jepara",
+    "dusun": "Ujung Pandan",
+    "contact": "08123456789",
+    "condition": "Baik",
+    "description": "Kantor desa untuk melayani administrasi warga",
+    "images": [
+      "https://example.com/kantor-desa-1.jpg",
+      "https://example.com/kantor-desa-2.jpg"
+    ]
+  },
+  {
+    "name": "Masjid Al-Ikhlas",
+    "latitude": -6.536,
+    "longitude": 110.741,
+    "category_name": "Masjid",
+    "subcategory_name": null,
+    "address": "Jl. Masjid Raya, Ujung Pandan",
+    "dusun": "Ujung Pandan",
+    "contact": null,
+    "condition": "Baik",
+    "description": "Masjid utama di Ujung Pandan Jepara",
+    "images": [
+      "https://example.com/masjid-1.jpg"
+    ]
+  },
+  {
+    "name": "SD Negeri Ujung Pandan",
+    "latitude": -6.537,
+    "longitude": 110.742,
+    "category_name": "Sekolah",
+    "subcategory_name": "SD",
+    "address": "Jl. Pendidikan, Ujung Pandan",
+    "dusun": "Ujung Pandan",
+    "contact": "0291-123456",
+    "condition": "Baik",
+    "description": "Sekolah Dasar Negeri di Ujung Pandan",
+    "images": []
+  }
+]
+

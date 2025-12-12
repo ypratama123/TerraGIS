@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f0f4f8;
+  /* Softer background */
+  --foreground: #2d3748;
+
+  /* Genshin/Soft UI Palette */
+  --genshin-blue-primary: #4A72D4;
+  /* Layla's Theme Blue */
+  --genshin-blue-secondary: #6B93EB;
+  --genshin-bg-gradient-start: #EBF4FF;
+  --genshin-bg-gradient-end: #F7FAFC;
+  --genshin-card-bg: rgba(255, 255, 255, 0.9);
+  --genshin-text-primary: #2D3748;
+  --genshin-text-secondary: #718096;
+
+  --radius-xl: 24px;
+  --radius-lg: 16px;
+
+  /* Soft Shadows */
+  --shadow-soft: 0 10px 25px -5px rgba(59, 130, 246, 0.15), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+  --shadow-glow: 0 0 20px rgba(74, 114, 212, 0.3);
+
+  color-scheme: light;
+}
+
+@theme inline {
+  --font-sans: var(--font-manrope);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+button,
+[role="button"],
+a {
+  cursor: pointer;
+}
+
+/* Map marker styles */
+/* Map marker styles */
+.custom-map-marker-container {
+  background: transparent !important;
+  border: none !important;
+}
+
+.marker-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  /* Base background for contrast */
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.marker-wrapper.selected {
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5), 0 0 0 5px var(--marker-color);
+  transform: scale(1.1);
+}
+
+.marker-wrapper.selected .marker-fill {
+  inset: 0;
+}
+
+.marker-wrapper.selected .marker-icon {
+  background: white;
+  opacity: 1;
+}
+
+.marker-fill {
+  position: absolute;
+  inset: 100% 0 0 0;
+  /* Start hidden at bottom */
+  background: var(--marker-color);
+  transition: inset 0.3s ease-in-out;
+}
+
+.marker-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  /* Inner circle size relative to marker */
+  height: 50%;
+  border-radius: 50%;
+  background: var(--marker-color);
+  opacity: 0.6;
+  z-index: 1;
+  transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.marker-wrapper:hover .marker-fill {
+  inset: 0;
+  /* Fill up */
+}
+
+.marker-wrapper:hover .marker-icon {
+  background: white;
+  opacity: 1;
+}
+
+/* Ensure sidebar and panels are above leaflet map */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+.leaflet-pane {
+  z-index: 1 !important;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 2 !important;
+}
+
+/* Leaflet popup font */
+.leaflet-popup-content {
+  font-family: var(--font-manrope), system-ui, sans-serif;
+}
+
+/* Custom Tooltip Styles */
+.leaflet-tooltip.transparent-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.leaflet-tooltip.transparent-tooltip::before {
+  display: none !important;
+}
+
+.custom-tooltip-content {
+  position: relative;
+  display: inline-block;
+  /* Ensure it wraps content tightly */
+  /* Use the variable set by JS, or fallback to black */
+  background-color: var(--tooltip-bg, #070707);
+  border-radius: 4px;
+  padding: 4px 12px;
+  /* Use the cubic-bezier from the user's request */
+  animation: tooltip-pop 0.4s cubic-bezier(0.47, 2, 0.41, 1.5) forwards;
+  color: white;
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+/* Arrow for the inner content */
+.custom-tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  /* Bottom of the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--tooltip-bg, #070707) transparent transparent transparent;
+}
+
+@keyframes tooltip-pop {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 10px, 0) scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
