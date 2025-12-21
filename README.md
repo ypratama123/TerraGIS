@@ -457,10 +457,10 @@ Proyek ini dikembangkan untuk kepentingan pemetaan infrastruktur Desa Ngabul, Ke
 
 ## 👨‍💻 Kontributor
 
-- **Developer**: Wisnu Harminto
+- **Developer**: Wisnu hidayat
 
 ---
 
 <p align="center">
-  <sub>Dibuat dengan ❤️ untuk Desa Ngabul, Jepara</sub>
+  <sub>Dibuat untuk tugas uas, Jepara</sub>
 </p>
