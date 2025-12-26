@@ -3,7 +3,7 @@
 # 🌍 Terra GIS
 ### Menjelajah Lebih Dekat Desa Ngabul Jepara
 
-![Terra GIS Banner](public/logo.png)
+![Terra GIS Banner](public/banner.png)
 
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Supabase](https://img.shields.io/badge/Supabase-Database-green?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.io/)
