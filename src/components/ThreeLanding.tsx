@@ -70,10 +70,10 @@ export default function ThreeLanding({ onEnter }: ThreeLandingProps) {
           className="text-center pointer-events-auto"
         >
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tighter drop-shadow-2xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50">
-            GIS MAP
+            Terra GIS
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 font-light tracking-wide">
-            Explore Desa Ngabul in 3D
+            menjelajah lebih dekat desa ngabul jepara
           </p>
 
           <button
